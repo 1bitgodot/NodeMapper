@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://resources/styles/Panel1.tres" type="StyleBox" id=1]
+[ext_resource path="res://scenes/DiscreteScene.gd" type="Script" id=2]
+
+[node name="$DiscreteScene" type="PanelContainer"]
+margin_top = 76.0
+margin_right = 1016.0
+margin_bottom = 592.0
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rows" type="VBoxContainer" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 1012.0
+margin_bottom = 512.0
+
+[node name="Label" type="Label" parent="Rows"]
+margin_right = 1008.0
+margin_bottom = 14.0
+text = "Description"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txtContent" type="TextEdit" parent="Rows"]
+margin_top = 18.0
+margin_right = 1008.0
+margin_bottom = 484.0
+size_flags_vertical = 3
+
+[node name="btnClear" type="Button" parent="Rows"]
+margin_top = 488.0
+margin_right = 128.0
+margin_bottom = 508.0
+rect_min_size = Vector2( 128, 0 )
+size_flags_horizontal = 0
+text = "Clear"
