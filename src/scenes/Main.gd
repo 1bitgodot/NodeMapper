@@ -1,7 +1,7 @@
 extends "res://scenes/Main_vars.gd"
 
 func _ready():
-	NodeMapper.export_vars("res://scenes/Main_vars.gd", self)
+#	NodeMapper.export_vars("res://scenes/Main_vars.gd", self)
 	DiscreteScene.txtContent.connect("text_changed", self, "on_txtContent_changed")
 	btnClear.connect("pressed", self, "on_btnClear_pressed")
 	lblVersion.text = NodeMapper.VERSION
