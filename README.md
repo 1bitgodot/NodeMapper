@@ -1,5 +1,14 @@
 # NodeMapper 1.0
-Godot plugin to map nodes to variables
+
+A _Godot_ plugin to help assign nodes to variables dynamically at runtime.
+
+## Why?
+
+Nodes may get moved around frequently during development processes such as UI design. If the path to a node is hardcoded into the script, it has to be edited each time the corresponding position of the node in the scene tree is changed. New users will also benefit as they do not have to learn and use node paths to start making games and applications.
+
+## How to install
+
+Just make sure the __addons__ folder is copied into your project folder. All other files are not required. Remember to enable the plugin in _Project Settings_. You can then call functions __map_nodes()__ or __export_vars()__ in the global __NodeMapper__ singleton object in any scene.
 
 ## How to use
 
@@ -84,7 +93,7 @@ onready var btnSave: Button = get_node("Examples/SubScene/Form/btnSave")
 onready var DiscreteScene: PanelContainer = get_node("Examples/$DiscreteScene")
 ```
 
-You can now remove the variables from the scene script and inherit instead them from the exported file. Once your scene tree is stabilized, you can remark off the __export_vars()__ statement. Make sure to re-export if you make changes to your scene tree that includes the name and position of existing nodes or adding new nodes that require variable mapping. If you change the _base type_ of your root scene node, you must also update the _base node type_ in the export file.
+You can now remove the variables from the scene script and inherit them instead from the exported file with __extends__. Once your scene tree is stabilized, you can remark off the __export_vars()__ statement. Make sure to re-export if you make changes to your scene tree that includes the name and position of existing nodes or adding new nodes that require variable mapping. If you change the _base type_ of your scene's root node, make sure to the _base type_ in the export file as well.
 
 ```gdscript
 # res://scenes/Main.gd
