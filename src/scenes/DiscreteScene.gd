@@ -1,10 +1,7 @@
-extends PanelContainer
-
-var txtContent
-var btnClear
+extends "res://scenes/DescreteScene_vars.gd"
 
 func _ready() -> void:
-	NodeMapper.export_vars("res://scenes/DescreteScene_vars.gd", self)
+#	NodeMapper.export_vars("res://scenes/DescreteScene_vars.gd", self)
 	btnClear.connect("pressed", self, "on_btnClear_pressed")
 
 func on_btnClear_pressed() -> void:
