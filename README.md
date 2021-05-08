@@ -1,11 +1,11 @@
-# NodeMapper
+# NodeMapper 1.0
 Godot plugin to map nodes to variables
 
 ## How to use
 
 The following image shows a sample scene tree. In the scene script, declare variables for the nodes that you wish to access, even if those nodes are in a sub-scene. However all node names must be unique except for those in discrete scenes. __NodeMapper__ will report an error when more than one node tries to map to the same variable. Discrete scene node names must be prefixed with the _$_ character. In the root scene where the variables reside, call __map_nodes()__ function in __NodeMapper__ to assign the nodes to those variables. This operation must be done in the __\_ready()__ function before accessing node variables.
 
-![Scene Tree](https://raw.githubusercontent.com/1bitgodot/NodeMapper/main/res/scene_tree.png?token=APHSK4AW3BDV7SH5IMSDXITASY6AU)
+![Scene Tree](https://raw.githubusercontent.com/1bitgodot/NodeMapper/main/res/scene_tree.png)
 
 ```gdscript
 # res://scenes/Main.gd
